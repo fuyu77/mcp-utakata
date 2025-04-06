@@ -31,7 +31,7 @@ server.tool(
     return {
       content: [{
         type: "text",
-        text: `ユーザーID: ${userId} の短歌一覧（最新順）:\n\n${formatted}`
+        text: `# ユーザーID: ${userId} の短歌一覧（最新順）\n\n${formatted}`
       }]
     };
   }
