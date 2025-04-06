@@ -25,18 +25,12 @@ npm install
 node build/index.js
 ```
 
-または
-
-```
-npm run start
-```
-
 ### MCP Inspectorでの動作確認
 
 [MCP Inspector](https://github.com/modelcontextprotocol/inspector)を利用して動作確認できます。
 
 ```
-npx @modelcontextprotocol/inspector npm run start
+npx @modelcontextprotocol/inspector node build/index.js
 ```
 
 ## tool: fetch-user-tanka

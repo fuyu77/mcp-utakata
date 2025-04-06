@@ -1,8 +1,5 @@
 {
   "type": "module",
-  "scripts": {
-    "start": "node build/index.js"
-  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.8.0"
   }
