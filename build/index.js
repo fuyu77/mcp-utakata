@@ -1,22 +1,24 @@
 import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { z } from "zod";
 
 const server = new McpServer({
   name: "Utakata Tanka Reader",
   version: "1.0.0"
 });
 
-server.resource(
-  "user-tanka-list",
-  new ResourceTemplate("tanka://user/{userId}", {}),
-  async (uri, { userId }) => {
+server.tool(
+  "fetch-user-tanka",
+  { userId: z.string() },
+  async ({ userId }) => {
     const response = await fetch(`https://utakatanka.jp/api/users/${userId}/posts`);
     if (!response.ok) {
       return {
-        contents: [{
-          uri: uri.href,
-          text: `ユーザーID: ${userId}の投稿が見つかりませんでした。`
-        }]
+        content: [{
+          type: "text",
+          text: `ユーザーID: ${userId} の投稿が見つかりませんでした。`
+        }],
+        isError: true
       };
     }
 
@@ -27,9 +29,9 @@ server.resource(
       .join("\n");
 
     return {
-      contents: [{
-        uri: uri.href,
-        text: `ユーザーID: ${userId}の短歌一覧（最新順）:\n\n${formatted}`
+      content: [{
+        type: "text",
+        text: `ユーザーID: ${userId} の短歌一覧（最新順）:\n\n${formatted}`
       }]
     };
   }
