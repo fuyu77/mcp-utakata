@@ -25,7 +25,7 @@ server.tool(
     const posts = await response.json();
 
     const formatted = posts
-      .map(post => `- ${post.tanka}（投稿日: ${post.published_at}）`)
+      .map(post => `- ${post.tanka}（投稿日時: ${post.published_at}、いいね数: ${post.likes_count}）`)
       .join("\n");
 
     return {
