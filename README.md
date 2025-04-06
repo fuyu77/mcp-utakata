@@ -1,8 +1,15 @@
 # 短歌投稿サイトUtakata MCPサーバー
 
-📝 このリポジトリは、Rails製の短歌投稿サイト「[Utakata](https://utakatanka.jp)」と、Claude DesktopなどのMCP対応クライアントを連携させるための **MCPサーバーの実装** です。
+短歌投稿サイトUtakataの情報を連携するMCPサーバーです。
 
-MCP（Model Context Protocol）を使うことで、LLM（大規模言語モデル）に対して、ユーザーの投稿データを安全かつ柔軟に提供できるようになります。
+## References
+
+- [短歌投稿サイトUtakata](https://utakatanka.jp/)
+- [短歌投稿サイトUtakataのGitHubリポジトリ](https://github.com/fuyu77/utakata)
+
+## Contact
+
+短歌投稿サイトUtakataのMCPサーバーの活用について、何かアイディアがある方は[連絡先](https://utakatanka.jp/about#contacts)までご連絡ください。
 
 ## Getting started
 
@@ -26,7 +33,7 @@ npm run start
 
 ### MCP Inspectorでの動作確認
 
-[MCP Inspector](https://github.com/modelcontextprotocol/inspector) を利用して動作確認できます。
+[MCP Inspector](https://github.com/modelcontextprotocol/inspector)を利用して動作確認できます。
 
 ```
 npx @modelcontextprotocol/inspector npm run start
