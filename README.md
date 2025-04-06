@@ -33,7 +33,9 @@ node build/index.js
 npx @modelcontextprotocol/inspector node build/index.js
 ```
 
-## tool: fetch-user-tanka
+## Tools
+
+### fetch-user-tanka
 
 指定されたユーザーIDの短歌の一覧を取得して、以下の形式で返します。
 
