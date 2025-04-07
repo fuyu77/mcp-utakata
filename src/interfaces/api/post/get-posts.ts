@@ -1,3 +1,3 @@
 import { Post } from '../../models/post.js';
 
-export type PostsResponse = Post[];
+export type GetPostsResponse = Post[];

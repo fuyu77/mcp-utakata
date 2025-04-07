@@ -1,7 +1,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
-import { PostsResponse } from './interfaces/api/post/get-posts.js';
+import { GetPostsResponse } from './interfaces/api/post/get-posts.js';
 
 const server = new McpServer({
   name: 'Utakata Tanka Reader',
@@ -22,7 +22,7 @@ server.tool('fetch-user-tanka', { userId: z.string() }, async ({ userId }) => {
     };
   }
 
-  const posts: PostsResponse = await response.json();
+  const posts: GetPostsResponse = await response.json();
 
   const formatted = posts
     .map(
