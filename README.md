@@ -19,6 +19,12 @@
 npm install
 ```
 
+### Build
+
+```
+npm run build
+```
+
 ### MCPサーバーの起動
 
 ```
