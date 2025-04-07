@@ -4,5 +4,9 @@
   "type": "module",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "^5.8.3"
   }
 }
