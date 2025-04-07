@@ -2,11 +2,18 @@
   "name": "mcp-utakata",
   "version": "1.0.0",
   "type": "module",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.3"
   }
 }
