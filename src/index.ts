@@ -1,15 +1,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
-
-interface Post {
-  id: number;
-  tanka_text: string;
-  likes_count: number;
-  published_at: string;
-}
-
-type PostsResponse = Post[];
+import { PostsResponse } from './interfaces/api/post/get-posts.js';
 
 const server = new McpServer({
   name: 'Utakata Tanka Reader',
